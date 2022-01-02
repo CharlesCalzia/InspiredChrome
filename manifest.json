@@ -1,6 +1,6 @@
 {
-    "name": "Youtrack",
-    "version": "1.0",
+    "name": "InspiredChrome",
+    "version": "1.0.0",
     "author": "Charles Calzia",
     "description": "Extension to help you reduce the amount of time spent on Youtube!",
     "manifest_version": 2,
@@ -9,9 +9,16 @@
         "default_popup": "popup.html"
     },
     "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
         "128": "icon_128.png"
     },
     "permissions": [
-        "*://*.youtube.com/*"
-    ]
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
 }
