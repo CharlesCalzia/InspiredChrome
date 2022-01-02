@@ -1,19 +1,10 @@
-console.log("bg running");
-/*
-*/
-//check if youtube is in currently opened tabs
-
 var timerSecs = 0;
 console.log("content-script.js loaded");
 chrome.storage.sync.get('timerSecs', function(result) {
     if (!result.timerSecs) {
-        chrome.storage.sync.set({'timerSecs': 0}, function() {
-            console.log('timer set to 0');
-            
-        });
+        chrome.storage.sync.set({'timerSecs': 0});
     }
     else{
-        console.log('timer is ' + result.timerSecs);
         timerSecs = result.timerSecs;
     }
 });
